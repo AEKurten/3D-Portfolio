@@ -33,7 +33,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto max-sm:h-[80vh]">
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 max-sm:top-10`}
       >
@@ -50,12 +50,12 @@ const Hero = () => {
       </div>
       {!isMobile && <ComputersCanvas />}
       {isMobile && (
-        <div className="absolute bottom-20">
+        <div className="absolute max-sm:bottom-24 max-[375px]:hidden">
           <Lottie options={defaultOptions} height={400} width={400} />
         </div>
       )}
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center max-sm:bottom-14">
+      <div className="absolute bottom-32 w-full flex justify-center items-center max-[375px]:bottom-10 max-sm:bottom-0">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
