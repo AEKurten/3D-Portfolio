@@ -25,6 +25,9 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import livex from "./company/Livex.jpg";
+import tranformit from "./company/Tranform.png";
+import exceedit from "./company/Exceed_IT_png.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -59,4 +62,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  livex,
+  tranformit,
+  exceedit,
 };
