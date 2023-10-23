@@ -32,6 +32,8 @@ import exceedit from "./company/Exceed_IT_png.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import exceedItDash from "./ExceedITBackend.png";
+import fairshare from "./Download_Fair_share.png";
 
 export {
   logo,
@@ -65,4 +67,6 @@ export {
   livex,
   tranformit,
   exceedit,
+  exceedItDash,
+  fairshare,
 };

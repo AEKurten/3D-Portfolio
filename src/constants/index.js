@@ -22,6 +22,8 @@ import {
   livex,
   tranformit,
   exceedit,
+  exceedItDash,
+  fairshare,
 } from "../assets";
 
 export const navLinks = [
@@ -219,7 +221,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: exceedItDash,
     source_code_link: "https://github.com/",
   },
   {
@@ -261,7 +263,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: fairshare,
     source_code_link: "https://github.com/",
   },
 ];
