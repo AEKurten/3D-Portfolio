@@ -2,12 +2,40 @@ import { motion } from "framer-motion";
 import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
 import TypewriterComponent from "./Typewriter";
+import { useEffect, useState } from "react";
+import Lottie from "react-lottie";
+import animationData from "../lotties/laptop.json";
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 max-sm:top-10`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
@@ -20,9 +48,14 @@ const Hero = () => {
           <TypewriterComponent />
         </div>
       </div>
-      <ComputersCanvas />
+      {!isMobile && <ComputersCanvas />}
+      {isMobile && (
+        <div className="absolute bottom-20">
+          <Lottie options={defaultOptions} height={400} width={400} />
+        </div>
+      )}
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center max-sm:bottom-1">
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center max-sm:bottom-14">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
