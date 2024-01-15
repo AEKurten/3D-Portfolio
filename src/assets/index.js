@@ -34,6 +34,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import exceedItDash from "./ExceedITBackend.png";
 import fairshare from "./Download_Fair_share.png";
+import Anime from "./AnimeVault.jpg";
 
 export {
   logo,
@@ -69,4 +70,5 @@ export {
   exceedit,
   exceedItDash,
   fairshare,
+  Anime,
 };

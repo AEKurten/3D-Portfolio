@@ -24,6 +24,7 @@ import {
   exceedit,
   exceedItDash,
   fairshare,
+  Anime,
 } from "../assets";
 
 export const navLinks = [
@@ -264,6 +265,27 @@ const projects = [
       },
     ],
     image: fairshare,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Anime Vault",
+    description:
+      "Building a Next 14 Server Side App With Server Actions, Infinite Scroll & Framer Motion.",
+    tags: [
+      {
+        name: "Typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Next.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Framer Motion",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: Anime,
     source_code_link: "https://github.com/",
   },
 ];
